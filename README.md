@@ -25,6 +25,13 @@ tested, multi-contributor production code in CI.
 
 ---
 
+> [!NOTE]
+> My previous GitHub account was permanently suspended, so I'm starting fresh here.
+> The commit history on this account is recent — it doesn't reflect my actual years of
+> experience. The projects below are real and were built well before this account existed.
+
+---
+
 ## ⚡ Selected work
 
 ### [ask-me](https://github.com/iannis-walter/askme) &nbsp;·&nbsp; [↗ live](https://askme-ashy.vercel.app)
