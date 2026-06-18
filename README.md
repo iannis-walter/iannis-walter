@@ -15,7 +15,7 @@ I build reliable backend systems and ship applied-LLM features — RAG, structur
 outputs, and tool-use agents. Comfortable from a deployed prototype all the way to
 tested, multi-contributor production code in CI.
 
-`📍 Aix-en-Provence, France`  ·  `🌍 Open to remote — FR / EU`
+`📍 Marseille, France`  ·  `🌍 Open to remote — FR / EU`
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-cartoon-lake.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/iannis-vasselet/)
