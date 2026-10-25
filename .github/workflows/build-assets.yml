@@ -1,0 +1,44 @@
+name: Build README assets
+
+# Régénère les SVG du panneau dès que le tableau de données change.
+# Éditer build.mjs suffit : les images suivent toutes seules.
+on:
+  push:
+    branches: [main]
+    paths:
+      - build.mjs
+      - .github/workflows/build-assets.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-assets
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Generate SVGs
+        run: node build.mjs
+
+      - name: Commit regenerated SVGs
+        run: |
+          git add assets
+          # Le générateur est déterministe : sans changement réel, pas de commit.
+          if git diff --cached --quiet; then
+            echo "Assets inchangés, rien à committer."
+            exit 0
+          fi
+          git config user.name "Iannis Vasselet"
+          git config user.email "279709607+iannis-walter@users.noreply.github.com"
+          git commit -m "Rebuild README assets from build.mjs"
+          git push
